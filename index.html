@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Carro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+            <div class="parallax-bg">
+              
+            </div>
+
+            <div class="content">
+              <section class="block" id="bloco1">
+                <div class="text">
+                  <h2>Design Esportivo</h2>
+                  <p>Um carro feito para impressionar com sua aparência agressiva e aerodinâmica.</p>
+            </div>
+                <div class="carro-novo"><img src="sandero.xx1-removebg-preview.png" alt="Design Esportivo" class="block-img img-left" /></div>
+              </section>
+
+    <section class="block" id="bloco2">
+      <div class="text">
+        <h2>Performance</h2>
+        <p>Motor potente, aceleração impressionante e tecnologia de ponta para velocidade e controle.</p>
+      </div>
+      <img src="sandero3.png" alt="Performance" class="block-img img-right" />
+    </section>
+
+    <section class="block" id="bloco3">
+      <div class="text">
+        <h2>Interior Luxuoso</h2>
+        <p>Conforto, tecnologia embarcada e sofisticação para todos os ocupantes.</p>
+      </div>
+      <img src="Interior.webp" alt="Interior" class="block-img img-left" />
+    </section>
+
+    <section class="block" id="bloco4">
+      <div class="text">
+        <h2>Segurança Avançada</h2>
+        <p>Assistentes inteligentes, frenagem automática e proteção total para sua família.</p>
+      </div>
+      <img src="batida.webp" alt="Segurança" class="block-img img-right" />
+    </section>
+  </div>
+
+  <a href="https://wa.me/5511982353935" target="_blank" class="whatsapp-button">
+    Fale conosco
+  </a>
+
+  <script src="script.js">
+
+// Efeito Parallax
+const parallax = document.querySelector(".parallax-bg");
+window.addEventListener("scroll", () => {
+  const offset = window.pageYOffset;
+  parallax.style.backgroundPositionY = ${offset * 0.5}px;
+});
+
+// Ativar animações quando aparecerem
+const blocks = document.querySelectorAll(".block");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+blocks.forEach(block => observer.observe(block));
+
+  </script>
+</body>
+</html>

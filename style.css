@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.parallax-bg {
+  background-image: url('LOJA.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: background-position 0.3s ease-out;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+.block {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  color: white;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: rgba(0,0,0,0.6);
+}
+.block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.block h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+.block p {
+  font-size: 1.3em;
+  max-width: 500px;
+}
+.text {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.block-img {
+  width: 45%;
+  max-width: 500px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.img-left {
+  transform: translateX(-100px);
+}
+.img-right {
+  transform: translateX(100px);
+}
+.block.visible .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.block.visible .img-left,
+.block.visible .img-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+@media (min-width: 1020px) {
+ .carro-novo{
+  width: 80%;
+
+ }
+}
+
+@media (max-width: 770px) {
+ .block-img.img-right{
+  width: 120%;
+  height: auto;
+  display: block;
+ }
+
+ .block .block-img{
+  width: 100%;
+ }
+.block-img{
+  max-width: 100%;
+}
+ }
+
+ 
+@media (max-width:430px) {
+
+   .block-img.img-right{
+  width: 150%;
+  height: auto;
+  display: block;
+ }
+
+ .block .block-img{
+  width: 1000rem;
+
+ }
+.block-img{
+  max-width: 100%;
+}
+.carro-novo{
+  width: 500rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+  
+ 
+}
+ 
+
+  
